@@ -1,0 +1,145 @@
+body {
+    background-image: url("spacee.png");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+}
+
+
+.navbarre {
+    background-color: rgba(159, 5, 236, 0.4);
+    padding: 1rem 0;
+}
+.navbarre ul {
+    display: flex;
+    justify-content: center;
+    gap: 15rem; 
+    margin: 0;
+}
+.navbarre li {
+    list-style: none;
+}
+.navbarre a {
+    text-decoration: none;
+    color: rgb(237, 7, 229);
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+.carre {
+    display: flex;          
+    justify-content: center; 
+    align-items: center;     
+    flex-grow: 1;           
+    gap: 100px;             
+    flex-wrap: wrap;        
+}
+
+
+.formule {
+    color: rgb(160, 12, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    border-radius: 25px;
+    border: 5px solid rgb(160, 12, 233);
+    background-color: rgba(246, 7, 250, 0.1); 
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.formulaire-box {
+    width: 700px;
+    padding: 40px;
+    border-radius: 12px;
+    border: 7px solid rgb(160, 12, 233);
+    background-color: rgba(191, 7, 237, 0.1); 
+    color: #df05ac;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulaire-box h2 {
+    margin-top: 0;
+    color: rgb(160, 12, 233);
+    margin-bottom: 17px;
+}
+
+.formulaire {
+    width: 100%;
+    margin-bottom: 17px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.formulaire label {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+
+.formulaire input, 
+.formulaire textarea {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 2px solid rgb(160, 12, 233);
+    border-radius: 8px;
+    padding: 10px;
+    color: rgb(161, 7, 238); 
+    
+}
+
+
+.formulaire input:focus, 
+.formulaire textarea:focus {
+    background-color: rgba(160, 12, 233, 0.2); 
+}
+
+
+.envoyer {
+    background-color: rgb(160, 12, 233);
+    color: rgb(4, 20, 239);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    margin-top: 15px;
+  
+}
+
+.envoyer :hover {
+    background-color: rgb(255, 88, 50); 
+}
