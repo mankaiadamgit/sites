@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Liens pour la police d'écriture custom -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Liens pour la police d'écriture custom -->
     <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">   <!-- Liens pour la police d'écriture custom -->
@@ -93,13 +93,15 @@
 </html>
 
 <style>
-    /* Image de fond pour toutes les pages */
+
+
+/* Image de fond */
 body {
     background-image: url("background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* optionnel */
+    background-attachment: fixed; 
 }
 h1 {
     width: 300px;           
@@ -108,20 +110,24 @@ h1 {
     color : white;  
     font-family: "Geo", sans-serif;   
 }
+
+
 .bloc-p2 {
     display: flex;
-    align-items: center;        /* aligne l’image et le texte au même niveau */
-    gap: 30px;                  /* espace entre image et texte */
-    
-    background-color: rgba(0, 0, 0, 0.4); /* fond semi-transparent */
-    padding: 20px;
-    border-radius: 20px;        /* coins arrondis */
-    margin: 20px auto;          /* espace entre les cartes + centrage */
-    width: 80%;                 /* taille du cadre */
-    max-width: 1000px;           /* taille max (toujours cohérente) */
+    align-items: center;
+    gap: 30px;
+
     background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
     backdrop-filter: blur(6px);
+
+    /*flex-wrap: wrap;*/
 }
+
 
 
 .planet-icon {
@@ -131,16 +137,41 @@ h1 {
 
 .planete_mini {
     margin: 0;
-    font-size: 1.5em;
     color: white;
     font-family: "Geo", sans-serif;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);  /*rem --> suit la taille de police du navigateur (pour adapter le tout)*/
 }
+
 
 .desc_planete {
     margin-top: 5px;
     color: white;
     line-height: 1.5;
     font-family: "Geo", sans-serif;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+}
+
+/* Pour le mobile */
+@media (max-width: 768px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .bloc-p2 {
+        flex-direction: column;   /* image au-dessus du texte */
+        text-align: center;
+        width: 90%;
+    }
+
+    .planet-icon {
+        width: 70px;  /* un peu plus grande sur mobile */
+    }
+
+    h1 {
+        width: auto;  /* enlève la contrainte des 300px */
+        padding: 0 10px;
+    }
 }
 
 </style>
