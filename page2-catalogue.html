@@ -10,16 +10,16 @@
     <title>SpaceTravel</title>
 </head>
 <body> 
-<nav class="menu">
-  <ul>
-    <li><a href="#">Accueil</a></li> 
-    <li><a href="#">Catalogue</a></li>
-    <li><a href="#">Tarifs</a></li>
-    <li><a href="#">À propos</a></li>
-    <li><a href="#">Réclamations</a></li>  
-  </ul>
-</nav>
-</nav>
+    <nav class="menu">
+        <ul>
+            <li><a href="page1-accueil.html">Accueil</a></li>
+            <li><a href="page2-catalogue.html">Catalogue</a></li>
+            <li><a href="#">Tarifs</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Réclamations</a></li>
+            <li><a class="btn_menu" href="#"><img src="assets/theme_icon.png" alt="icone du bouton de changement de theme"></a></li>
+        </ul>
+    </nav>
     <div>
         <h1>Destinations...</h1>
 
@@ -103,6 +103,48 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; 
 }
+
+.menu{
+        background-color: rgba(0, 0, 0, 0.400);
+        height: 7ch;
+        justify-content: center;
+        
+    }
+
+.menu ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+        align-items: center;
+        margin: 0;
+        font-weight: 1000;
+        color: white;
+        text-shadow:
+        0 0 10px #ffffff;
+        font-family: "Geo", sans-serif;
+    }
+
+.menu a:hover{
+        text-decoration: underline;
+    }
+
+.btn_menu img{
+        width: 5ch;
+        
+    }
+
+.menu li {
+        margin-top: 0.8ch;
+        list-style: none;
+    }
+
+.menu li a {
+        color: white;
+        text-decoration: none;
+    }
+
+
 h1 {
     width: 300px;           
     margin: 0 auto;         
