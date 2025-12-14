@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Liens pour la police d'écriture custom -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Liens pour la police d'écriture custom -->
+    <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">   <!-- Liens pour la police d'écriture custom -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceTravel</title>
+</head>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="page1-accueil.html">Accueil</a></li>
+            <li><a href="page2-catalogue.html">Catalogue</a></li>
+            <li><a href="#">Tarifs</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Réclamations</a></li>
+            <li><a class="btn_menu" href="#"><img src="assets/theme_icon.png" alt="icone du bouton de changement de theme"></a></li>
+        </ul>
+    </nav>
+
+    <div id="presentation">
+        <h1>Voyagez dans l'espace</h1>
+        <p>Avec SpaceTravel, nous vous proposons une activité novatrice : le voyage spatial. En effet, les récentes avancées technologiques ont démontré qu'il était possible d'explorer toujours plus loin toujours plus vite. C'est pour cette raison que cette idée est née, pourquoi pas proposer du tourisme dans notre magnifique univers ?</p>
+    </div>
+
+    <div id="top_planetes">
+        <h2>Nos planètes les plus visités : </h3>
+        <div class="desc_planete_mini">
+            <img src="assets/planete_rouge.png" alt="miniature de planete rouge">
+            <p class="planete_mini">Mars, la célèbre “planète rouge”, est une planète rocheuse plus froide et plus petite que la Terre. Sa surface est recouverte de poussière riche en oxyde de fer, ce qui lui donne sa couleur rougeâtre. Elle abrite des montagnes colossales, des canyons immenses et reste l’un des astres les plus étudiés pour la recherche de vie passée.</p>
+        </div>
+        <div class="desc_planete_mini">
+            <img src="assets/planete_verte.png" alt="miniature de planete planete verte">
+            <p class="planete_mini">Arkéos, une petite planète rocheuse dont la surface est teintée de rose par des minéraux irisés uniques.
+                 Ses déserts lumineux, ses falaises cristallines et ses légers voiles atmosphériques rosés lui donnent une apparence presque onirique.
+                  Malgré son climat sec, elle abrite une flore rare capable de briller doucement au crépuscule.</p>
+        </div>
+        <div class="desc_planete_mini">
+            <img src="assets/planete_bleu.png" alt="miniature de planete bleue">
+            <p class="planete_mini">Polyphémus, une immense géante gazeuse bleutée située dans le système d’Alpha Centauri.
+                 Elle possède plusieurs lunes, dont Pandora, la plus connue. Depuis sa surface,
+                  son atmosphère turbulente et ses bandes nuageuses créent un spectacle lumineux impressionnant dans le ciel de ses satellites.</p>
+        </div>
+    </div>
+
+    <video src="assets/promo.mp4" width="600" controls></video>
+
+</body>
+</html>
+
+<style>
+    p {color: white;
+    font-size: 3ch;
+    font-family: "Geo", sans-serif;
+    color: white;
+    text-shadow: 5px 5px 5px #000000;}
+    h1 {color: white;
+        font-family: "Geo", sans-serif;
+        text-shadow: 5px 5px 5px #000000;}
+    h2 {color: white;
+        font-family: "Geo", sans-serif;
+        text-shadow: 5px 5px 5px #000000;}
+
+        
+    body {
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+
+    .menu{
+        background-color: rgba(0, 0, 0, 0.400);
+        height: 7ch;
+        justify-content: center;
+        
+    }
+
+    .menu ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+        align-items: center;
+        margin: 0;
+        font-weight: 1000;
+        color: white;
+        text-shadow:
+        0 0 10px #ffffff;
+        font-family: "Geo", sans-serif;
+    }
+
+    .menu a:hover{
+        text-decoration: underline;
+    }
+
+    .btn_menu img{
+        width: 5ch;
+        
+    }
+
+    .menu li {
+        margin-top: 0.8ch;
+        list-style: none;
+    }
+
+    .menu li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .desc_planete_mini{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 5%;
+    }
+
+    .desc_planete_mini img{
+        width: 20ch;
+    }
+
+    #presentation{
+        text-align: center;
+        width: 75%;
+        margin: 0 auto;}
+    #top_planetes{
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.250);
+        padding-left: 3ch;
+        border-radius: 10ch;
+        text-align: center;
+        width: 75%;
+        margin: 0 auto;
+    }
+    video{
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2ch;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+
+
+
+@media (max-width: 768px) {
+    p {color: white;
+        font-size: 1ch;
+        font-family: "Geo", sans-serif;
+        color: white;
+        text-shadow: 5px 5px 5px #000000;}
+    h1 {color: white;
+        font-family: "Geo", sans-serif;
+        text-shadow: 5px 5px 5px #000000;}
+    h2 {color: white;
+        font-family: "Geo", sans-serif;
+        text-shadow: 5px 5px 5px #000000;}
+    body {
+        background-image: url(assets/background.png);
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu{
+        background-color: rgba(0, 0, 0, 0.400);
+        height: 7ch;
+        justify-content: center;
+        
+    }
+
+    .menu ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+        align-items: center;
+        margin: 0;
+        font-weight: 1000;
+        color: white;
+        text-shadow:
+        0 0 10px #ffffff;
+        font-family: "Geo", sans-serif;
+    }
+
+    .menu a:hover{
+        text-decoration: underline;
+    }
+
+    .btn_menu img{
+        width: 5ch;
+        
+    }
+
+    .menu li {
+        margin-top: 0.8ch;
+        list-style: none;
+    }
+
+    .menu li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .desc_planete_mini{
+        display:inline;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 5%;
+    }
+
+    .desc_planete_mini img{
+        width: 5ch;
+    }
+
+    #presentation{
+        text-align: center;
+        width: 75%;
+        margin: 0 auto;}
+    #top_planetes{
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.250);
+        border-radius: 10ch;
+        text-align: center;
+        width: 75%;
+        margin: 0 auto;
+    }
+    video{
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2ch;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 3%;
+    }}
+</style>
