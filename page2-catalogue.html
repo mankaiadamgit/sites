@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!--<link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Liens pour la police d'écriture custom -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Liens pour la police d'écriture custom -->
     <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">   <!-- Liens pour la police d'écriture custom -->
@@ -9,14 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpaceTravel</title>
 </head>
+
 <body> 
     <nav class="menu">
         <ul>
             <li><a href="page1-accueil.html">Accueil</a></li>
             <li><a href="page2-catalogue.html">Catalogue</a></li>
-            <li><a href="page3-formules">Tarifs</a></li>
-            <li><a href="page4-a-propos">A propos</a></li>
-            <li><a href="page5-reclamations">Réclamations</a></li>
+            <li><a href="page3-formules.html">Tarifs</a></li>
+            <li><a href="page4-a-propos.html">A propos</a></li>
+            <li><a href="page5-reclamations.html">Réclamations</a></li>
             <li><a class="btn_menu" href="#"><img src="assets/theme_icon.png" alt="icone du bouton de changement de theme"></a></li>
         </ul>
     </nav>
@@ -77,7 +78,7 @@
     </div>
     <div class="bloc-p2">
         <img src="assets/Mon-Cala.png" alt="miniature de Mon Cala" class="planet-icon"> <!-- Pour les fans bizarre de StarWars -->
-        <h3 class="planete_mini">Mon-Cala </h3> 
+        <h3 class="planete_mini">Mon-Cala</h3> 
         <p class="desc_planete"> Mon-Cala est un monde océanique presque entièrement recouvert d’eau.
              Habité par les Mon Calamari et les Quarren, il abrite d’immenses cités sous-marines et une culture avancée tournée vers l’ingénierie navale.
              Sa beauté bleutée contraste avec son histoire souvent marquée par les conflits galactiques.</p>
@@ -89,132 +90,14 @@
              Ses déserts lumineux, ses falaises cristallines et ses légers voiles atmosphériques rosés lui donnent une apparence presque onirique.
              Malgré son climat sec, elle abrite une flore rare capable de briller doucement au crépuscule.</p>
     </div>
+    <script>
+        const btn = document.querySelector(".btn_menu");
+
+        btn.addEventListener("click", function (e) {
+            e.preventDefault(); // empêche le lien #
+        document.body.classList.toggle("alt-theme");
+    });
+    </script>
 </body>
 </html>
-
-<style>
-
-
-/* Image de fond */
-body {
-    background-image: url("background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-}
-
-.menu{
-        background-color: rgba(0, 0, 0, 0.400);
-        height: 7ch;
-        justify-content: center;
-        
-    }
-
-.menu ul {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        padding: 0;
-        align-items: center;
-        margin: 0;
-        font-weight: 1000;
-        color: white;
-        text-shadow:
-        0 0 10px #ffffff;
-        font-family: "Geo", sans-serif;
-    }
-
-.menu a:hover{
-        text-decoration: underline;
-    }
-
-.btn_menu img{
-        width: 5ch;
-        
-    }
-
-.menu li {
-        margin-top: 0.8ch;
-        list-style: none;
-    }
-
-.menu li a {
-        color: white;
-        text-decoration: none;
-    }
-
-
-h1 {
-    width: 300px;           
-    margin: 0 auto;         
-    text-align: center;
-    color : white;  
-    font-family: "Geo", sans-serif;   
-}
-
-
-.bloc-p2 {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
-    background: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 1000px;
-    backdrop-filter: blur(6px);
-
-    /*flex-wrap: wrap;*/
-}
-
-
-
-.planet-icon {
-    width: 50px;                /* taille identique pour toutes les planètes */
-    height: auto;
-}
-
-.planete_mini {
-    margin: 0;
-    color: white;
-    font-family: "Geo", sans-serif;
-    font-size: clamp(1.2rem, 4vw, 1.5rem);  /*rem --> suit la taille de police du navigateur (pour adapter le tout)*/
-}
-
-
-.desc_planete {
-    margin-top: 5px;
-    color: white;
-    line-height: 1.5;
-    font-family: "Geo", sans-serif;
-    font-size: clamp(0.9rem, 3.5vw, 1rem);
-}
-
-/* Pour le mobile */
-@media (max-width: 768px) {
-
-    body {
-        background-attachment: scroll;
-    }
-
-    .bloc-p2 {
-        flex-direction: column;   /* image au-dessus du texte */
-        text-align: center;
-        width: 90%;
-    }
-
-    .planet-icon {
-        width: 70px;  /* un peu plus grande sur mobile */
-    }
-
-    h1 {
-        width: auto;  /* enlève la contrainte des 300px */
-        padding: 0 10px;
-    }
-}
-
-</style>
 
