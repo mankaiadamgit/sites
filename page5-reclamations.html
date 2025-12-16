@@ -43,3 +43,19 @@
 
 </body>
 </html>
+
+java en dessous
+
+var boutons = document.querySelectorAll(".btn");
+var modal = document.getElementById("reservation-modal");
+
+
+for (var i = 0; i < boutons.length; i++) {
+    boutons[i].onclick = function () {
+        modal.style.display = "flex";
+    };
+}
+
+
+
+
