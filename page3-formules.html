@@ -37,7 +37,7 @@
         <div class="formule">
             <h2>Formule Premium</h2>
             <p class="prix">8 500 000 €</p>
-            <p class="desc">Voyage  – 7 jours</p>
+            <p class="desc">Voyage dans l'univers  – 7 jours</p>
             <button class="btn">Réserver</button>
         </div>
 
@@ -45,7 +45,7 @@
 
 
     <div id="reservation-modal" class="reservation">
-    <div class="modal-content">
+    <div class="rectangle">
 
         <h2>Réserver votre voyage</h2>
 
@@ -63,7 +63,21 @@
 
 
 
-css
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 body {
@@ -75,8 +89,8 @@ body {
     height: 100vh; 
     display: flex;
     flex-direction: column; 
+    font-family: sans-serif;
 }
-
 
 .navbarre {
     background-color: rgba(159, 5, 236, 0.4);
@@ -98,10 +112,8 @@ body {
 .navbarre a {
     text-decoration: none;
     color: rgb(237, 7, 229);
-    font-family: sans-serif;
     font-weight: bold;
 }
-
 
 .carre {
     display: flex;          
@@ -123,9 +135,7 @@ body {
     border-radius: 25px;
     border: 5px solid rgb(160, 12, 233);
     background-color: rgba(246, 7, 250, 0.1); 
-   
 }
-
 
 .prix {
     font-size: 1.8rem;
@@ -137,7 +147,6 @@ body {
     font-size: 1.1rem;
     color: #e3b7ff;
 }
-
 
 .btn {
     background-color: rgb(160, 12, 233);
@@ -153,21 +162,31 @@ body {
     background-color: rgb(113, 3, 224);
 }
 
-
 .reservation {
     display: none; 
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
 }
 
+.rectangle {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
 
-/*formulaire !!!*/
+
+/*formulaire*/
+
+
+
+
+
+
 
 .formulaire-box {
     width: 700px;
@@ -182,7 +201,7 @@ body {
 }
 
 .formulaire-box h2 {
-    margin-top: 0;
+
     color: rgb(160, 12, 233);
 }
 
@@ -193,12 +212,10 @@ body {
     flex-direction: column;
 }
 
-
 .formulaire label {
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
-
 
 .formulaire input, 
 .formulaire textarea {
@@ -207,20 +224,11 @@ body {
     border-radius: 8px;
     padding: 10px;
     color: rgb(161, 7, 238); 
-    resize: vertical;
 }
-
-
-
-.formulaire textarea:focus {
-    outline: none;
-    background-color: rgba(160, 12, 233, 0.2); 
-}
-
 
 .envoyer {
     background-color: rgb(160, 12, 233);
-    color: rgb(4, 20, 239);
+    color: white;
     border: none;
     padding: 10px 30px;
     border-radius: 20px;
@@ -232,7 +240,3 @@ body {
 .envoyer:hover {
     background-color: rgb(149, 4, 134); 
 }
-
-
-
-
