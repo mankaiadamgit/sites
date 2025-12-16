@@ -2,6 +2,9 @@
 <html lang="fr">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Liens pour la police d'écriture custom -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Liens pour la police d'écriture custom -->
+    <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">   <!-- Liens pour la police d'écriture custom -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpaceTravel</title>
@@ -11,109 +14,45 @@
         <ul>
             <li><a href="page1-accueil.html">Accueil</a></li>
             <li><a href="page2-catalogue.html">Catalogue</a></li>
-            <li><a href="page3-formules">Tarifs</a></li>
-            <li><a href="page4-a-propos">A propos</a></li>
-            <li><a href="page5-reclamations">Réclamations</a></li>
+            <li><a href="page3-formules.html">Tarifs</a></li>
+            <li><a href="page4-a-propos.html">A propos</a></li>
+            <li><a href="page5-reclamations.html">Réclamations</a></li>
             <li><a class="btn_menu" href="#"><img src="assets/theme_icon.png" alt="icone du bouton de changement de theme"></a></li>
         </ul>
-    </nav>
-</nav>
-</nav>
+</nav> 
     <div>
         <h1>Qui Sommes-Nous ?</h1>
 
     </div>
     <div class="bloc-p4">
-        <p> Nous sommes un groupe de trois étudiants passionnés par l’espace, la technologie et le développement web.
-Ce site a été réalisé dans le cadre d’un projet de groupe, avec pour objectif de concevoir une plateforme autour du thème du voyage spatial.
-
-À travers ce projet, nous avons voulu imaginer une expérience immersive permettant de découvrir différentes destinations spatiales, réelles ou fictives, tout en mettant en pratique nos compétences en HTML, CSS et conception de sites web. Chaque membre du groupe a contribué à la réflexion, au design et au développement du site.
-
-Ce projet nous a permis de travailler en équipe, d’apprendre à organiser un site complet et de relever des défis techniques, notamment en matière de responsive design, d’accessibilité et d’expérience utilisateur.
-SpaceTravel représente à la fois un travail académique et une exploration créative d’un univers qui nous fascine.
+        <p class="about-us"> Nous sommes un groupe de trois étudiants passionnés par l’espace, la technologie et le développement web.
+          Ce site a été réalisé dans le cadre d’un projet de groupe, avec pour objectif de concevoir une plateforme autour du thème du voyage spatial.
+          À travers ce projet, nous avons voulu imaginer une expérience immersive permettant de découvrir différentes destinations spatiales, qu'elles soit réelles ou fictives, 
+          tout en mettant en pratique nos compétences en HTML, CSS et conception de sites web. Chaque membre du groupe a contribué à la réflexion, au design et au développement du site.
+          Ce projet nous a permis de travailler en équipe, d’apprendre à organiser un site complet et de relever des défis techniques, notamment en matière de responsive design, d’accessibilité et d’expérience utilisateur.
+          SpaceTravel représente à la fois un travail académique et une exploration créative d’un univers qui nous fascine.
         </p>
     </div>
-</body>
+    <script>
 
+const btnMenu = document.querySelector('.btn_menu');
+const body = document.body;
+const menu = document.querySelector('.menu');
+const bloc = document.querySelector('.bloc-p4');
+const h1 = document.querySelector('h1');
+const about =document.querySelector('.about-us');
+
+btnMenu.addEventListener('click', (e) => {
+    e.preventDefault(); // éviter le scroll vers le haut
+    body.classList.toggle('alt-theme');
+    menu.classList.toggle('alt-theme');
+    bloc.classList.toggle('alt-theme');
+    h1.classList.toggle('alt-theme');
+    about.classList.toggle('alt-theme')
+});
+</script>
+
+</body>
 </html>
 
-
-<style>
-
-
-/* Image de fond */
-body {
-    background-image: url("background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-}
-
-.menu{
-        background-color: rgba(0, 0, 0, 0.400);
-        height: 7ch;
-        justify-content: center;
-        
-    }
-
-.menu ul {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        padding: 0;
-        align-items: center;
-        margin: 0;
-        font-weight: 1000;
-        color: white;
-        text-shadow:
-        0 0 10px #ffffff;
-        font-family: "Geo", sans-serif;
-    }
-
-.menu a:hover{
-        text-decoration: underline;
-    }
-
-.btn_menu img{
-        width: 5ch;
-        
-    }
-
-.menu li {
-        margin-top: 0.8ch;
-        list-style: none;
-    }
-
-.menu li a {
-        color: white;
-        text-decoration: none;
-    }
-
-
-h1 {
-    width: 300px;           
-    margin: 0 auto;         
-    text-align: center;
-    color : white;  
-    font-family: "Geo", sans-serif;   
-}
-
-
-.bloc-p4 {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
-    background: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 1000px;
-    backdrop-filter: blur(6px);
-
-    /*flex-wrap: wrap;*/
-}
-</style>
 
