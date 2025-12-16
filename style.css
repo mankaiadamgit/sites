@@ -1,41 +1,35 @@
 /* === BASE GLOBALE === */
-
 body {
     background-image: url("assets/background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; 
+    font-family: "Geo", sans-serif;
+    color: white;
+    transition: all 0.5s ease;
 }
 
 p {
-    color: white;
-    font-size: 1.1rem;
-    font-family: "Geo", sans-serif;
+    font-size: clamp(1rem, 1.1rem, 1.2rem);
     text-shadow: 5px 5px 5px #000000;
 }
 
 h1, h2 {
-     width: 300px;           
-    margin: 0 auto;         
+    width: 300px;
+    margin: 0 auto;
     text-align: center;
-    color : white;  
-    font-family: "Geo", sans-serif;   
-}
-/* === MENU === */
-.menu {
-    height: clamp(3rem, 7vh, 7ch); /* hauteur minimum 3rem, max 7ch */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu li a {
-    font-size: clamp(1rem, 2vw, 1.2rem); /* texte adaptable au zoom et à l'écran */
     color: white;
 }
 
-
+/* === MENU === */
+.menu {
+    height: clamp(3rem, 7vh, 7ch);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
 .menu ul {
     display: flex;
@@ -45,7 +39,6 @@ h1, h2 {
     padding: 0;
     margin: 0;
     font-weight: 1000;
-    font-family: "Geo", sans-serif;
     color: white;
     text-shadow: 0 0 10px #ffffff;
 }
@@ -55,6 +48,11 @@ h1, h2 {
     margin-top: 0.8ch;
 }
 
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
 
 .menu a:hover {
     text-decoration: underline;
@@ -63,76 +61,81 @@ h1, h2 {
 .btn_menu img {
     width: 5ch;
 }
-/* === CATALOGUE / PLANETES === */
 
-.bloc-p2 { 
-    display: flex; align-items: center;
+/* === CATALOGUE / PLANETES === */
+.bloc-p2 {
+    display: flex;
+    align-items: center;
     gap: 30px;
     background: rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 20px;
-    margin: 20px auto; 
-    width: 80%; 
-    max-width: 1000px; 
-    backdrop-filter: blur(6px); 
- } 
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    backdrop-filter: blur(6px);
+}
 
-.planet-icon { 
-    width: 50px; /* taille identique pour toutes les planetes */ 
-    height: auto; } 
+.planet-icon {
+    width: 50px;
+    height: auto;
+}
 
-.planete_mini { 
-    margin: 0; 
-    color: white; 
-    font-family: "Geo", sans-serif; 
-    font-size: clamp(1.2rem, 4vw, 1.5rem); /*rem --> suit la taille de police du navigateur (pour adapter le tout)*/ } 
+.planete_mini {
+    margin: 0;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    color: white;
+}
 
-.desc_planete { margin-top: 5px; 
-    color: white; 
-    line-height: 1.5; 
-    font-family: "Geo", sans-serif; 
-    font-size: clamp(0.9rem, 3.5vw, 1rem); }
+.desc_planete {
+    margin-top: 5px;
+    color: white;
+    line-height: 1.5;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+}
 
 /* === PAGE ACCUEIL === */
+.desc_planete_mini {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5%;
+}
 
-.desc_planete_mini{
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 5%;
-    }
+.desc_planete_mini img {
+    width: 20ch;
+}
 
-    .desc_planete_mini img{
-        width: 20ch;
-    }
+#presentation {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
 
-    #presentation{
-        text-align: center;
-        width: 75%;
-        margin: 0 auto;}
-    #top_planetes{
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.250);
-        padding-left: 3ch;
-        border-radius: 10ch;
-        text-align: center;
-        width: 75%;
-        margin: 0 auto;
-    }
-    video{
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 75%;
-        display: flex;
-        flex-direction: column;
-        border-radius: 2ch;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 3%;
-    }
+#top_planetes {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding-left: 3ch;
+    border-radius: 10ch;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+video, iframe {
+    width: 75%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2ch;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
 /* === PAGE TARIFS === */
-
 .carre {
     display: flex;
     justify-content: center;
@@ -148,7 +151,6 @@ h1, h2 {
     border: 5px solid rgb(160, 12, 233);
     background-color: rgba(246, 7, 250, 0.1);
     color: rgb(160, 12, 233);
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,11 +183,9 @@ h1, h2 {
 }
 
 /* === A PROPOS === */
-
 .about-us {
     margin-top: 5px;
     color: white;
-    font-family: "Geo", sans-serif;
     padding: 20px;
     font-size: clamp(1.4rem, 5vw, 1.5rem);
     line-height: 1.8;
@@ -195,8 +195,7 @@ h1, h2 {
     display: flex;
     align-items: center;
     gap: 30px;
-
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0,0,0,0.3);
     padding: 20px;
     border-radius: 20px;
     margin: 20px auto;
@@ -206,7 +205,6 @@ h1, h2 {
 }
 
 /* === FORMULAIRE === */
-
 .formulaire-box {
     width: 700px;
     padding: 40px;
@@ -248,227 +246,28 @@ h1, h2 {
     font-size: 1.1rem;
     font-weight: bold;
 }
-/* === MOBILE === */
 
+/* === MOBILE / RESPONSIVE === */
 @media (max-width: 768px) {
-
     p { font-size: 1rem; }
-
-    h1 {
-        width: auto;
-        padding: 0 10px;
-    }
-
-    .bloc-p2 {
-        flex-direction: column;
-        text-align: center;
-        width: 90%;
-    }
-
-    .planet-icon {
-        width: 70px;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .menu li {
-        width: 90%;
-        text-align: center;
-        margin-top: 0;
-    }
-   
-    /* Menu vertical */
-    .menu ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .menu li {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Accueil et catalogue */
-    #top_planetes, .bloc-p2, .desc_planete_mini {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    /* Formules */
-    .carre {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    /* Formulaire */
-    .formulaire {
-        width: 100%;
-    }
-
-    /* Vidéos et images */
-    video, iframe {
-        width: 100%;
-    }
+    h1 { width: auto; padding: 0 10px; }
+    .bloc-p2, #top_planetes, .desc_planete_mini { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+    .planet-icon { width: 70px; }
+    .menu ul { flex-direction: column; gap: 1rem; }
+    .menu li { width: 100%; text-align: center; margin-top: 0; }
+    .carre { flex-direction: column; gap: 1rem; }
+    .formulaire { width: 100%; }
+    video, iframe { width: 100%; max-width: 100%; }
 }
 
-
-/* === THEME ALTERNATIF === */
-
-body.alt-theme {
-    background-image: url("assets/background-light.png"); /* une autre image claire */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: black; /* texte principal en noir */
-    transition: all 0.5s ease;
-}
-
-    /* Menu */
-     body.alt-theme .menu { 
-        background: rgba(0, 0, 0, 0.3); 
-    } 
-    
-    body.alt-theme .menu li a { 
-        color: white; 
-        text-shadow: none; 
-    } 
-    
-
-/* Titres */
-body.alt-theme h1,
-body.alt-theme h2 {
-    color: #111;
-    text-shadow: none;
-}
-
-/* Texte catalogue */
-body.alt-theme .planete_mini,
-body.alt-theme .desc_planete {
-    color: #111;
-}
-
-/* Bloc À propos */
-body.alt-theme .bloc-p4 {
-    background: rgba(255, 255, 255, 0.85);
-    color: black;
-    backdrop-filter: blur(0);
-}
-
-body.alt-theme .about-us {
-    color: black;
-}
-
-    
-    /* Cartes planetes */ 
-    body.alt-theme .bloc-p2 {
-         flex-direction: column; /* image au-dessus */ 
-         align-items: center; 
-         text-align: center; 
-         background: rgba(0, 0, 0, 0.3); 
-         backdrop-filter: blur(10px); 
-         box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
-        } 
-        
-    body, .bloc-p2, .menu { 
-        transition: all 0.4s ease; 
-    } 
-        
-    /* Icones planetes */ 
-    body.alt-theme .planet-icon { 
-        width: 90px;
-        margin-bottom: 10px; 
-        } 
-            
-    /* Texte */ 
-    body.alt-theme .desc_planete {
-         max-width: 700px; 
-        }
-
-
-body.alt-theme h1,
-body.alt-theme h2 {
-    color: #111;
-    text-shadow: none;
-}
-
-/* Bloc "À propos" */
-body.alt-theme .bloc-p4 {
-    background: rgba(255, 255, 255, 0.85);
-    color: black;
-    backdrop-filter: blur(0);
-}
-
-/* Texte à propos */
-body.alt-theme .about-us {
-    color: black;
-}
-
-
-/* === THEME CLAIR === */
-body.alt-theme {
-    background-image: url("assets/background-light.png"); /* fond clair */
-    color: black;
-    transition: all 0.5s ease;
-}
-
-/* Menu */
-body.alt-theme .menu {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-body.alt-theme .menu li a {
-    color: black;
-    text-shadow: none;
-}
-
-/* Titres et paragraphes */
-body.alt-theme h1,
-body.alt-theme h2,
-body.alt-theme p,
-body.alt-theme .planete_mini {
-    color: black;
-    text-shadow: none;
-}
-
-/* Blocs */
-body.alt-theme #top_planetes {
-    background: rgba(255, 255, 255, 0.85);
-    color: black;
-    backdrop-filter: blur(0);
-    padding: 20px;
-    border-radius: 20px;
-}
-
-/* Images de planètes un peu plus visibles */
-body.alt-theme .desc_planete_mini img {
-    filter: brightness(1.1);
-}
-
-/* Vidéo iframe */
-body.alt-theme iframe {
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 1ch;
-}
-
-
-
-
-/* === THEME CLAIR - PAGE FORMULES === */
+/* === THEME CLAIR / ALT-THEME === */
 body.alt-theme {
     background-image: url("assets/background-light.png");
     color: black;
-    transition: all 0.5s ease;
 }
 
-/* Menu */
 body.alt-theme .menu {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255,255,255,0.9);
 }
 
 body.alt-theme .menu li a {
@@ -476,19 +275,25 @@ body.alt-theme .menu li a {
     text-shadow: none;
 }
 
-/* Blocs de formules */
-body.alt-theme .carre {
-    background: rgba(255, 255, 255, 0.85);
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 20px;
+body.alt-theme h1, body.alt-theme h2, body.alt-theme p, body.alt-theme .planete_mini {
+    color: black;
+    text-shadow: none;
 }
 
-body.alt-theme .formule {
-    background-color: rgba(246, 7, 250, 0.1); /* ou plus clair */
+body.alt-theme #top_planetes,
+body.alt-theme .bloc-p2,
+body.alt-theme .carre,
+body.alt-theme .bloc-p4,
+body.alt-theme .formulaire-box {
+    background: rgba(255, 255, 255, 0.85);
+    color: black;
     border: 2px solid rgb(160, 12, 233);
-    color: black; /* texte noir */
+    border-radius: 20px;
+    backdrop-filter: blur(0);
+}
+
+body.alt-theme .desc_planete_mini img {
+    filter: brightness(1.1);
 }
 
 body.alt-theme .formule h2,
@@ -506,56 +311,6 @@ body.alt-theme .btn:hover {
     background-color: rgb(113, 3, 224);
 }
 
-/* Modal réservation */
-body.alt-theme .reservation .rectangle {
-    background: rgba(255, 255, 255, 0.95);
-    color: black;
-}
-
-/* === THEME CLAIR - PAGE RECLAMATIONS === */
-body.alt-theme {
-    background-image: url("assets/background-light.png");
-    color: black;
-    transition: all 0.5s ease;
-}
-
-/* Menu */
-body.alt-theme .menu {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-body.alt-theme .menu li a {
-    color: black;
-    text-shadow: none;
-}
-
-/* Bloc formulaire */
-body.alt-theme .carre {
-    background: rgba(255, 255, 255, 0.85);
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 20px;
-}
-
-body.alt-theme .formulaire-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 2px solid rgb(160, 12, 233);
-    color: black;
-}
-
-body.alt-theme .formulaire-box h2 {
-    color: black;
-}
-
-body.alt-theme .formulaire label,
-body.alt-theme .formulaire input,
-body.alt-theme .formulaire textarea {
-    color: black;
-    border: 2px solid rgb(160, 12, 233);
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
 body.alt-theme .envoyer {
     background-color: rgb(160, 12, 233);
     color: white;
@@ -565,5 +320,8 @@ body.alt-theme .envoyer:hover {
     background-color: rgb(113, 3, 224);
 }
 
-
-
+body.alt-theme iframe {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 1ch;
+}
