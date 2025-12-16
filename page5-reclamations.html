@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reclamations</title>
     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Liens pour la police d'écriture custom -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Liens pour la police d'écriture custom -->
+    <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">   <!-- Liens pour la police d'écriture custom -->
 </head>
 <body>
 
-    <nav class="navbarre">
+    <nav class="menu">
         <ul>
-            <li><a >Accueil</a></li>
-            <li><a >Catalogue</a></li>
-            <li><a href="site.html">Tarifs</a></li>
-            <li><a >A propos</a></li>
-            <li><a href="reclamations.html">Réclamations</a></li>
+            <li><a href="page1-accueil.html">Accueil</a></li>
+            <li><a href="page2-catalogue.html">Catalogue</a></li>
+            <li><a href="page3-formules.html">Tarifs</a></li>
+            <li><a href="page4-a-propos.html">A propos</a></li>
+            <li><a href="page5-reclamations.html">Réclamations</a></li>
+            <li><a class="btn_menu" href="#"><img src="assets/theme_icon.png" alt="icone du bouton de changement de theme"></a></li>
         </ul>
     </nav>
     
@@ -40,21 +44,19 @@
             
         </div>
     </div>
+<script>
+const btnMenu = document.querySelector('.btn_menu');
+const body = document.body;
+
+btnMenu.addEventListener('click', (e) => {
+    e.preventDefault();
+    body.classList.toggle('alt-theme');
+});
+</script>
 
 </body>
 </html>
 
-java en dessous
-
-var boutons = document.querySelectorAll(".btn");
-var modal = document.getElementById("reservation-modal");
-
-
-for (var i = 0; i < boutons.length; i++) {
-    boutons[i].onclick = function () {
-        modal.style.display = "flex";
-    };
-}
 
 
 
