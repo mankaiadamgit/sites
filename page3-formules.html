@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voyages Spatiaux</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Liens pour la police d'écriture custom -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Liens pour la police d'écriture custom -->
+    <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">   <!-- Liens pour la police d'écriture custom -->
 </head>
 <body>
 
-    <nav class="navbarre">
+    <nav class="menu">
         <ul>
-            <li><a >Accueil</a></li>
-            <li><a>Catalogue</a></li>
-            <li><a>Tarifs</a></li>
-            <li><a>À propos</a></li>
-            <li><a href="reclamations.html">reclamations</a></li>
+            <li><a href="page1-accueil.html">Accueil</a></li>
+            <li><a href="page2-catalogue.html">Catalogue</a></li>
+            <li><a href="page3-formules.html">Tarifs</a></li>
+            <li><a href="page4-a-propos.html">A propos</a></li>
+            <li><a href="page5-reclamations.html">Réclamations</a></li>
+            <li><a class="btn_menu" href="#"><img src="assets/theme_icon.png" alt="icone du bouton de changement de theme"></a></li>
         </ul>
     </nav>
 
@@ -56,7 +60,16 @@
     </div>
 </div>
 
-<script src="script.js"></script>
+<script>
+const btnMenu = document.querySelector('.btn_menu');
+const body = document.body;
+
+btnMenu.addEventListener('click', (e) => {
+    e.preventDefault();
+    body.classList.toggle('alt-theme');
+});
+</script>
+
 
 </body>
 </html>
@@ -71,172 +84,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-body {
-    background-image: url("spacee.png");
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    height: 100vh; 
-    display: flex;
-    flex-direction: column; 
-    font-family: sans-serif;
-}
-
-.navbarre {
-    background-color: rgba(159, 5, 236, 0.4);
-    padding: 1rem 0;
-}
-
-.navbarre ul {
-    display: flex;
-    justify-content: center;
-    gap: 15rem; 
-    margin: 0;
-    padding: 0;
-}
-
-.navbarre li {
-    list-style: none;
-}
-
-.navbarre a {
-    text-decoration: none;
-    color: rgb(237, 7, 229);
-    font-weight: bold;
-}
-
-.carre {
-    display: flex;          
-    justify-content: center; 
-    align-items: center;     
-    flex-grow: 1;           
-    gap: 100px;             
-    flex-wrap: wrap;        
-}
-
-.formule {
-    color: rgb(160, 12, 233);
-    display: flex;
-    flex-direction: column;     
-    align-items: center;
-    justify-content: center;
-    width: 350px;
-    height: 350px;
-    border-radius: 25px;
-    border: 5px solid rgb(160, 12, 233);
-    background-color: rgba(246, 7, 250, 0.1); 
-}
-
-.prix {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ff6cff;
-}
-
-.desc {
-    font-size: 1.1rem;
-    color: #e3b7ff;
-}
-
-.btn {
-    background-color: rgb(160, 12, 233);
-    border: none;
-    padding: 10px 25px;
-    border-radius: 20px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: rgb(113, 3, 224);
-}
-
-.reservation {
-    display: none; 
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-}
-
-.rectangle {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    border-radius: 15px;
-    color: white;
-    text-align: center;
-}
-
-
-/*formulaire*/
-
-
-
-
-
-
-
-.formulaire-box {
-    width: 700px;
-    padding: 40px;
-    border-radius: 12px;
-    border: 7px solid rgb(160, 12, 233);
-    background-color: rgba(191, 7, 237, 0.1); 
-    color: #df05ac;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.formulaire-box h2 {
-
-    color: rgb(160, 12, 233);
-}
-
-.formulaire {
-    width: 25rem;
-    margin-bottom: 17px;
-    display: flex;
-    flex-direction: column;
-}
-
-.formulaire label {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.formulaire input, 
-.formulaire textarea {
-    background-color: rgba(255, 255, 255, 0.1); 
-    border: 2px solid rgb(160, 12, 233);
-    border-radius: 8px;
-    padding: 10px;
-    color: rgb(161, 7, 238); 
-}
-
-.envoyer {
-    background-color: rgb(160, 12, 233);
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 20px;
-    font-size: 1.1rem;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-.envoyer:hover {
-    background-color: rgb(149, 4, 134); 
-}
