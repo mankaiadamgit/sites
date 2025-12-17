@@ -8,6 +8,8 @@ body {
     font-family: "Geo", sans-serif;
     color: white;
     transition: all 0.5s ease;
+    margin: 0;
+    padding: 0;
 }
 
 p {
@@ -24,7 +26,6 @@ h1, h2 {
 
 /* === MENU === */
 .menu {
-    height: clamp(3rem, 7vh, 7ch);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,7 +268,7 @@ body.alt-theme {
 }
 
 body.alt-theme .menu {
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 210, 143, 0.397);
 }
 
 body.alt-theme .menu li a {
@@ -285,9 +286,9 @@ body.alt-theme .bloc-p2,
 body.alt-theme .carre,
 body.alt-theme .bloc-p4,
 body.alt-theme .formulaire-box {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.11);
     color: black;
-    border: 2px solid rgb(160, 12, 233);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
     backdrop-filter: blur(0);
 }
