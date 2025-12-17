@@ -1,6 +1,6 @@
-## Site WEB Projet R1.02
+# Site WEB Projet R1.02
 
-# Equipe :
+## Equipe :
 
 Nicolas Moyenin
 Adam Mankai
