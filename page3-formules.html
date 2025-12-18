@@ -64,6 +64,14 @@
     var boutons = document.querySelectorAll(".btn");
     var modal = document.getElementById("reservation-modal");
 
+    const btnMenu = document.querySelector('.btn_menu');
+    const body = document.body;
+
+    btnMenu.addEventListener('click', (e) => {
+        e.preventDefault(); // éviter le scroll vers le haut
+        body.classList.toggle('alt-theme'); // bascule le thème clair
+    });
+
 
     for (var i = 0; i < boutons.length; i++) {
         boutons[i].onclick = function () {
