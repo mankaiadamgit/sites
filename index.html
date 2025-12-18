@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-   <nav class="menu"> <!-- Barre de navigation -->
+   <nav class="menu">
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="catalogue.html">Catalogue</a></li>
@@ -24,12 +24,12 @@
         </ul>
     </nav>
 
-    <div id="presentation"> <!-- Zone de texte descriptive -->
+    <div id="presentation">
         <h1>Voyagez dans l'espace</h1>
         <p>Avec SpaceTravel, nous vous proposons une activité novatrice : le voyage spatial. En effet, les récentes avancées technologiques ont démontré qu'il était possible d'explorer toujours plus loin toujours plus vite. C'est pour cette raison que cette idée est née, pourquoi pas proposer du tourisme dans notre magnifique univers ?</p>
     </div>
 
-    <div id="top_planetes"> <!-- Liste de planètes réduite -->
+    <div id="top_planetes">
         <h2>Nos planètes les plus visités : </h2>
         <div class="desc_planete_mini">
             <img src="assets/planete_rouge.png" alt="miniature de planete rouge">
@@ -54,13 +54,12 @@
     
 
 <script>
-// Script pour le changement de thème
 const btnMenu = document.querySelector('.btn_menu');
 const body = document.body;
 
 btnMenu.addEventListener('click', (e) => {
-    e.preventDefault();
-    body.classList.toggle('alt-theme');
+    e.preventDefault(); // éviter le scroll vers le haut
+    body.classList.toggle('alt-theme'); // bascule le thème clair
 });
 </script>
 

@@ -13,7 +13,7 @@
 </head>
 
 <body> 
-    <nav class="menu"> <!-- Barre de navigation -->
+    <nav class="menu">
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="catalogue.html">Catalogue</a></li>
@@ -23,9 +23,9 @@
             <li><a class="btn_menu" href="#"><img src="assets/theme_icon.png" alt="icone du bouton de changement de theme"></a></li>
         </ul>
     </nav>
-    
-    <div> <!-- Liste des destination -->
+    <div>
         <h1>Destinations...</h1>
+
     </div>
     <div class="bloc-p2">
         <img src="assets/venus.png" alt="miniature de Vénus" class="planet-icon">
@@ -92,12 +92,11 @@
              Ses déserts lumineux, ses falaises cristallines et ses légers voiles atmosphériques rosés lui donnent une apparence presque onirique.
              Malgré son climat sec, elle abrite une flore rare capable de briller doucement au crépuscule.</p>
     </div>
-    <script> 
-        // Script pour le changement de thème
+    <script>
         const btn = document.querySelector(".btn_menu");
 
         btn.addEventListener("click", function (e) {
-            e.preventDefault();
+            e.preventDefault(); // empêche le lien #
         document.body.classList.toggle("alt-theme");
     });
     </script>

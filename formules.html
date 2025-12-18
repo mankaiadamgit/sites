@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <nav class="menu"> <!-- Barre de navigation -->
+    <nav class="menu">
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="catalogue.html">Catalogue</a></li>
@@ -24,25 +24,25 @@
         </ul>
     </nav>
 
-    <div class="square">
-        <!-- Formules -->
-        <div class="formula">
+    <div class="carre">
+
+        <div class="formule">
             <h2>Formule Economique</h2>
-            <p class="prices">250 000 €</p>
+            <p class="prix">250 000 €</p>
             <p class="desc">Vol spatial – 2 heures</p>
             <button class="btn">Réserver</button>
         </div>
 
-        <div class="formula">
+        <div class="formule">
             <h2>Formule Confort</h2>
-            <p class="prices">1 200 000 €</p>
+            <p class="prix">1 200 000 €</p>
             <p class="desc">Voyage vers la Lune – 3 jours</p>
             <button class="btn">Réserver</button>
         </div>
 
-        <div class="formula">
+        <div class="formule">
             <h2>Formule Premium</h2>
-            <p class="prices">8 500 000 €</p>
+            <p class="prix">8 500 000 €</p>
             <p class="desc">Voyage dans l'univers  – 7 jours</p>
             <button class="btn">Réserver</button>
         </div>
@@ -50,7 +50,7 @@
     </div>
 
 
-    <div id="book-modal" class="tobook">
+    <div id="reservation-modal" class="reservation">
     <div class="rectangle">
 
         <h2>Réserver votre voyage</h2>
@@ -63,7 +63,6 @@
 </div>
 
 <script>
-    // Script pour le changement de thème
     var boutons = document.querySelectorAll(".btn");
     var modal = document.getElementById("reservation-modal");
 
@@ -71,8 +70,8 @@
     const body = document.body;
 
     btnMenu.addEventListener('click', (e) => {
-        e.preventDefault();
-        body.classList.toggle('alt-theme');
+        e.preventDefault(); // éviter le scroll vers le haut
+        body.classList.toggle('alt-theme'); // bascule le thème clair
     });
 
 
@@ -82,6 +81,7 @@
         };
     }
 </script>
+
+
 </body>
 </html>
-
