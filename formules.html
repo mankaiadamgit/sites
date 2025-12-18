@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <nav class="menu">
+    <nav class="menu"> <!-- Barre de navigation -->
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="catalogue.html">Catalogue</a></li>
@@ -25,7 +25,7 @@
     </nav>
 
     <div class="carre">
-
+        <!-- Formules -->
         <div class="formule">
             <h2>Formule Economique</h2>
             <p class="prix">250 000 €</p>
@@ -71,8 +71,8 @@
     const body = document.body;
 
     btnMenu.addEventListener('click', (e) => {
-        e.preventDefault(); // éviter le scroll vers le haut
-        body.classList.toggle('alt-theme'); // bascule le thème clair
+        e.preventDefault();
+        body.classList.toggle('alt-theme');
     });
 
 
@@ -82,8 +82,7 @@
         };
     }
 </script>
-
-
 </body>
 </html>
+
 
