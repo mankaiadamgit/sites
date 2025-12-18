@@ -239,7 +239,7 @@ video, iframe {
     backdrop-filter: blur(6px);
     display: flex;
     justify-content: center;
-    gap: 10rem;
+    gap: 2rem;
 }
 
 .social a img {
@@ -374,4 +374,5 @@ body.alt-theme iframe {
     width: 90%;
     padding: 20px;
     box-sizing: border-box;
+
 }
