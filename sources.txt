@@ -4,3 +4,4 @@ Les prompts utilisés sont les suivants :
 - Génère un arrière plan dans un style coloré, un peu simpliste, sans présence humaine de l'espace (violet - bleu - jaune)
 - Comment faire pour avoir un bouton sur son site qui change la feuille de style css ? 
 - Comment faire en sorte d'avoir un css différent pour une page en fonction de si elle est mobile ou desktop ?
+- W3C me dit aussi The frameborder attribute on the iframe element is obsolete. Est-ce normal ?
