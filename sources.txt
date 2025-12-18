@@ -7,3 +7,4 @@ Les prompts utilisés sont les suivants :
 - W3C me dit aussi The frameborder attribute on the iframe element is obsolete. Est-ce normal ?
 - Est-il possible de faire un formulaire qui envoie un mail sans PhP ?
 - Peux tu me générer un fond d'écran comme celui ci mais en mode clair ? (image background.png)
+- Pour faire un "css alternatif" est-ce qu'on a besoin d'un 2eme fichier css ou pas ?
