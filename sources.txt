@@ -6,3 +6,4 @@ Les prompts utilisés sont les suivants :
 - Comment faire en sorte d'avoir un css différent pour une page en fonction de si elle est mobile ou desktop ?
 - W3C me dit aussi The frameborder attribute on the iframe element is obsolete. Est-ce normal ?
 - Est-il possible de faire un formulaire qui envoie un mail sans PhP ?
+- Peux tu me générer un fond d'écran comme celui ci mais en mode clair ? (image background.png)
