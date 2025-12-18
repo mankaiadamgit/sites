@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body> 
-<nav class="menu">
+<nav class="menu"> <!-- Barre de Navigation -->
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="catalogue.html">Catalogue</a></li>
@@ -23,6 +23,7 @@
         </ul>
 </nav> 
     <div>
+        <!-- Paragraphe de présentation de l'équipe -->
         <h1>Qui Sommes-Nous ?</h1>
 
     </div>
@@ -35,7 +36,7 @@
           SpaceTravel représente à la fois un travail académique et une exploration créative d’un univers qui nous fascine.
         </p>
     </div>
-    <h1>Réseaux Sociaux</h1>
+    <h1>Réseaux Sociaux</h1> <!-- Liens externes -->
         <div class="social">    
             <a href="https://www.instagram.com/spacetravel011"><img src="assets/instagram.png" alt="logo instagram"></a>
             <a href="https://www.mickael-martin-nevot.com/"><img src="assets/prof.jpg" alt="tête de monsieur Nevot (magnifique, digne d'un grand kebabiste)"></a>
@@ -50,7 +51,7 @@ const h1 = document.querySelector('h1');
 const about =document.querySelector('.about-us');
 
 btnMenu.addEventListener('click', (e) => {
-    e.preventDefault(); // éviter le scroll vers le haut
+    e.preventDefault();
     body.classList.toggle('alt-theme');
     menu.classList.toggle('alt-theme');
     bloc.classList.toggle('alt-theme');
@@ -61,4 +62,5 @@ btnMenu.addEventListener('click', (e) => {
 
 </body>
 </html>
+
 
